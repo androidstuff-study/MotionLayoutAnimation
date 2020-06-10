@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MotionScene
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Transition
+        motion:motionInterpolator="linear"
+        motion:duration="1000"
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end">
+
+        <OnSwipe
+            motion:touchAnchorSide="bottom"
+            motion:touchAnchorId="@+id/background"
+            motion:dragDirection="dragUp"/>
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/background"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:scaleY="1.1"
+            android:scaleX="1.1"
+            android:alpha="1.0"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+
+        <Constraint android:id="@+id/label" motion:layout_constraintBottom_toBottomOf="@+id/background"
+            android:alpha="0.6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:translationY="8dp" android:rotation="-90.0"/>
+
+        <Constraint
+            android:id="@+id/sublabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toEndOf="parent"
+            motion:layout_constraintBaseline_toBaselineOf="@+id/label"
+            android:layout_margin="8dp"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet
+        android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/background"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:translationY="100dp"
+            android:translationX="0dp"/>
+
+        <Constraint
+            android:id="@id/label" motion:layout_constraintBottom_toBottomOf="@+id/background"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:rotation="0.0"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"/>
+
+        <Constraint android:id="@id/sublabel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintBaseline_toBaselineOf="@+id/label"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+
+    </ConstraintSet>
+
+</MotionScene>

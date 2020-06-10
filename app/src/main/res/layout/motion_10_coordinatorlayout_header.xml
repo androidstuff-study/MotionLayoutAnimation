@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.example.motionlayout.utils.CollapsibleToolbar
+    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+    android:background="#1e376b"
+    android:minHeight="50dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:layoutDescription="@xml/scene_10_header"
+    android:id="@+id/motionLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:background="@color/colorAccent"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/monterey"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/label"
+        android:textSize="32sp"
+        android:textColor="#FFF"
+        android:text="@string/mumbai"
+        android:transformPivotY="0dp"
+        android:transformPivotX="0dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/sublabel"
+        android:textSize="24sp"
+        android:textColor="#FFF"
+        android:text="@string/india"
+        app:fontFamily="cursive"/>
+
+</com.example.motionlayout.utils.CollapsibleToolbar>

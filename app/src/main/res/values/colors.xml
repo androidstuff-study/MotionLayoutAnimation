@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="azure">#49A9DF</color>
+    <color name="cerulean_blue">#137AE2</color>
+
+    <color name="brown">#643A07</color>
+    <color name="active">#fff</color>
+    <color name="contentBackground">#FFF</color>
+
+    <color name="inActive">#bbb</color>
+</resources>

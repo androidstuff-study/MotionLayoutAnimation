@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.example.motionlayout.utils.DrawerContent
+    app:layoutDescription="@xml/scene_12_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/activity_scrolling"/>
+
+</com.example.motionlayout.utils.DrawerContent>
